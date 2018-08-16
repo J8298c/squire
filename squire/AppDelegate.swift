@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainVC = MainTabBarController()
         
         window?.rootViewController = mainVC
+        FirebaseApp.configure()
+        let db = Database.database().reference()
+        db.setValue("Hello Firebase")
+        
+        
+        
+        
         return true
     }
 

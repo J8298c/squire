@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BD91FA81E66E4B37723FF84 /* Pods_squire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E69037FA8A428FBE2D75B3 /* Pods_squire.framework */; };
 		D8263FF021227EB300434C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8263FEF21227EB300434C0D /* AppDelegate.swift */; };
 		D8263FF221227EB300434C0D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8263FF121227EB300434C0D /* MainTabBarController.swift */; };
 		D8263FF721227EB400434C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8263FF621227EB400434C0D /* Assets.xcassets */; };
 		D8263FFA21227EB400434C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8263FF821227EB400434C0D /* LaunchScreen.storyboard */; };
 		D82640022122807F00434C0D /* MainWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82640012122807F00434C0D /* MainWorkoutViewController.swift */; };
 		D8264004212280A400434C0D /* JourneyWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8264003212280A400434C0D /* JourneyWorkoutViewController.swift */; };
+		D8455BE72124F59200221A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8455BE62124F59200221A5C /* GoogleService-Info.plist */; };
+		D8455BEA2124FFFF00221A5C /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8455BE92124FFFF00221A5C /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50B5502D90BF18727F325242 /* Pods-squire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-squire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-squire/Pods-squire.debug.xcconfig"; sourceTree = "<group>"; };
+		A4E69037FA8A428FBE2D75B3 /* Pods_squire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_squire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8263FEC21227EB300434C0D /* squire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = squire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8263FEF21227EB300434C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8263FF121227EB300434C0D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		D8263FFB21227EB400434C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D82640012122807F00434C0D /* MainWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorkoutViewController.swift; sourceTree = "<group>"; };
 		D8264003212280A400434C0D /* JourneyWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyWorkoutViewController.swift; sourceTree = "<group>"; };
+		D8455BE62124F59200221A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8455BE92124FFFF00221A5C /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		F0B00140AE45E031626D9A93 /* Pods-squire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-squire.release.xcconfig"; path = "Pods/Target Support Files/Pods-squire/Pods-squire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD91FA81E66E4B37723FF84 /* Pods_squire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EBEBF77DE4EA252F0445579 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4E69037FA8A428FBE2D75B3 /* Pods_squire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC84ABF46C7801404504AFA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50B5502D90BF18727F325242 /* Pods-squire.debug.xcconfig */,
+				F0B00140AE45E031626D9A93 /* Pods-squire.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D8263FE321227EB300434C0D = {
 			isa = PBXGroup;
 			children = (
 				D8263FEE21227EB300434C0D /* squire */,
 				D8263FED21227EB300434C0D /* Products */,
+				BC84ABF46C7801404504AFA3 /* Pods */,
+				1EBEBF77DE4EA252F0445579 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +84,7 @@
 		D8263FEE21227EB300434C0D /* squire */ = {
 			isa = PBXGroup;
 			children = (
+				D8455BE82124FFE300221A5C /* Models */,
 				D8263FEF21227EB300434C0D /* AppDelegate.swift */,
 				D82640012122807F00434C0D /* MainWorkoutViewController.swift */,
 				D8264003212280A400434C0D /* JourneyWorkoutViewController.swift */,
@@ -63,8 +92,17 @@
 				D8263FF621227EB400434C0D /* Assets.xcassets */,
 				D8263FF821227EB400434C0D /* LaunchScreen.storyboard */,
 				D8263FFB21227EB400434C0D /* Info.plist */,
+				D8455BE62124F59200221A5C /* GoogleService-Info.plist */,
 			);
 			path = squire;
+			sourceTree = "<group>";
+		};
+		D8455BE82124FFE300221A5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8455BE92124FFFF00221A5C /* Workout.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8263FFE21227EB400434C0D /* Build configuration list for PBXNativeTarget "squire" */;
 			buildPhases = (
+				2AB685A54CA2FA101F20E6A5 /* [CP] Check Pods Manifest.lock */,
 				D8263FE821227EB300434C0D /* Sources */,
 				D8263FE921227EB300434C0D /* Frameworks */,
 				D8263FEA21227EB300434C0D /* Resources */,
+				835EFE9BADBF3193275DDD5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +167,54 @@
 			files = (
 				D8263FFA21227EB400434C0D /* LaunchScreen.storyboard in Resources */,
 				D8263FF721227EB400434C0D /* Assets.xcassets in Resources */,
+				D8455BE72124F59200221A5C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AB685A54CA2FA101F20E6A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-squire-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		835EFE9BADBF3193275DDD5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-squire/Pods-squire-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-squire/Pods-squire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8263FE821227EB300434C0D /* Sources */ = {
@@ -140,6 +224,7 @@
 				D8263FF221227EB300434C0D /* MainTabBarController.swift in Sources */,
 				D8263FF021227EB300434C0D /* AppDelegate.swift in Sources */,
 				D82640022122807F00434C0D /* MainWorkoutViewController.swift in Sources */,
+				D8455BEA2124FFFF00221A5C /* Workout.swift in Sources */,
 				D8264004212280A400434C0D /* JourneyWorkoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +359,7 @@
 		};
 		D8263FFF21227EB400434C0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50B5502D90BF18727F325242 /* Pods-squire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +378,7 @@
 		};
 		D826400021227EB400434C0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0B00140AE45E031626D9A93 /* Pods-squire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
