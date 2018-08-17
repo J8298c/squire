@@ -25,8 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = mainVC
         FirebaseApp.configure()
-        let db = Database.database().reference()
-        db.setValue("Hello Firebase")
         
         
         

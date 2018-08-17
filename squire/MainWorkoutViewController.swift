@@ -10,40 +10,27 @@ import UIKit
 import FirebaseDatabase
 
 class MainWorkoutViewController: UIViewController {
-    var ref: DatabaseReference!
-    var workouts = [Workout]() {
-        didSet {
-          print(workouts, "the workouts")
-        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Workouts"
+        let ref = Database.database().reference(withPath: "workouts")
+        ref.observe(.value, with: { snapshot in
+            print(snapshot.value as Any)
+        })
         
-        ref = Database.database().reference()
+       
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        ref.child("workouts").observe(.value) { snapshot in
-            var workouts = [Workout]()
-
-            for workoutsSnapshot in snapshot.children {
-                let workout = Workout(snapshot: workoutsSnapshot as! DataSnapshot)
-                print(workout, "the workout")
-                workouts.append(workout)
-            }
-            
-            self.workouts = workouts
             
         }
-    }
 
     
 
