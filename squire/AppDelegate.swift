@@ -26,9 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainVC
         FirebaseApp.configure()
         
-        
-        
-        
         return true
     }
 

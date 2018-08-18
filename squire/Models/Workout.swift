@@ -1,51 +1,45 @@
-//
-//  Workout.swift
-//  squire
-//
-//  Created by Julio Mojica on 8/15/18.
-//  Copyright © 2018 Julio Mojica. All rights reserved.
-//
-
-import Foundation
+//Workout struct
+import Firebase
 import FirebaseDatabase
 
 struct Workout {
+    let ref: DatabaseReference?
+    let name : String
     let bodyPart: String
-    let day: Int
     let equipment: String
-    let name: String
-    let sets: Int
     let userLevel: String
+    let sets: Int
+    let day: Int
     
-    
-    init(bodyPart: String, day: Int, equipment: String, name: String, sets: Int, userLevel: String ){
-        self.bodyPart = bodyPart
-        self.day = day
-        self.equipment = equipment
+    init(name : String,bodyPart: String, equipment: String,userLevel: String, sets: Int,day: Int) {
+        self.ref = nil
         self.name = name
-        self.sets = sets
+        self.bodyPart = bodyPart
+        self.equipment = equipment
         self.userLevel = userLevel
+        self.sets = sets
+        self.day = day
     }
     
-    init(snapshot: DataSnapshot) {
-        let snapshotValue = snapshot.value as! [String: AnyObject]
-        bodyPart = snapshotValue["bodyPart"] as! String
-        day = snapshotValue["day"] as! Int
-        equipment = snapshotValue["equipment"] as! String
-        name = snapshotValue["name"] as! String
-        sets = snapshotValue["sets"] as! Int
-        userLevel = snapshotValue["userLevel"] as! String
-    }
-    
-    
-    func toAnyObject() -> Any {
-        return [
-            "bodyPart": bodyPart,
-            "day": day,
-            "equipment": equipment,
-            "name": name,
-            "sets": sets,
-            "userLevel": userLevel
-        ]
+    init?(snapshot: DataSnapshot) {
+        //if somethoing goes wrong in this init we return nil
+        guard
+            let value = snapshot.value as? [String: AnyObject],
+            let name = value["name"] as? String,
+            let bodyPart = value["bodyPart"] as? String,
+            let equipment = value["equipment"] as? String,
+            let userLevel = value["userLevel"] as? String,
+            let sets = value["sets"] as? Int,
+            let day = value["day"] as? Int else {
+            return nil
+        }
+        self.ref = snapshot.ref
+        self.name = name
+        self.bodyPart = bodyPart
+        self.equipment = equipment
+        self.userLevel = userLevel
+        self.sets = sets
+        self.day = day
     }
 }
+
